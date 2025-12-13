@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Started</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #f0f2f5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+    
+    .card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      padding: 32px;
+      width: 100%;
+      max-width: 400px;
+    }
+    
+    .progress-container {
+      background: #e5e7eb;
+      border-radius: 9999px;
+      height: 8px;
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+    
+    .progress-bar {
+      background: #77e244;
+      height: 100%;
+      transition: width 0.7s ease;
+    }
+    
+    .text-center {
+      text-align: center;
+    }
+    
+    h1 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 8px;
+    }
+    
+    .subtitle {
+      color: #6b7280;
+      margin-bottom: 24px;
+    }
+    
+    select {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      font-size: 16px;
+      background: white;
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+    }
+    
+    select:focus {
+      outline: none;
+      border-color: #77e244;
+    }
+    
+    .logo {
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
+      border-radius: 8px;
+      display: block;
+      margin: 0 auto 24px;
+    }
+    
+    .steps {
+      margin-bottom: 24px;
+    }
+    
+    .steps p {
+      margin-bottom: 12px;
+      color: #1a1a1a;
+    }
+    
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 18px;
+      background: #77e244;
+      color: white;
+      font-size: 18px;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      transition: background 0.2s;
+    }
+    
+    .btn:hover {
+      background: #65c938;
+    }
+    
+    footer {
+      padding: 24px;
+      text-align: center;
+      color: #6b7280;
+      font-size: 14px;
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 8px;
+    }
+    
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <a href="https://gloffers.org/aff_c?offer_id=3096&aff_id=4344&source=insacre" id="redirect-link" style="display:none;"></a>
+  
+  <main>
+    <div class="card">
+      <!-- Step 1 -->
+      <div id="step1">
+        <div class="progress-container">
+          <div class="progress-bar" style="width: 33%"></div>
+        </div>
+        <div class="text-center">
+          <h1>What type of device are you using?</h1>
+          <p class="subtitle">Please select your device.</p>
+        </div>
+        <select id="device-select" onchange="goToStep2()">
+          <option value="">Select your device</option>
+          <option value="ios">iOS</option>
+          <option value="android">Android</option>
+        </select>
+      </div>
+      
+      <!-- Step 2 -->
+      <div id="step2" class="hidden">
+        <img src="https://logos-world.net/wp-content/uploads/2022/12/Ulta-Symbol.png" alt="Logo" class="logo">
+        <div class="progress-container">
+          <div class="progress-bar" id="progress2" style="width: 33%"></div>
+        </div>
+        <div class="text-center">
+          <h1>Almost there!</h1>
+          <p class="subtitle">Just a few more steps to start earning</p>
+        </div>
+        <div class="steps">
+          <p>1. Click the link below👇</p>
+          <p>2. Enter your email and info✍️</p>
+          <p>3. Complete 1-2 deals *important* (most are quite fun, playing games etc)✔️</p>
+          <p>4. Claim your reward!🎁</p>
+        </div>
+        <a href="https://gloffers.org/aff_c?offer_id=3096&aff_id=4344&source=insacre" class="btn">Start Earning Now</a>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <div class="footer-links">
+      <span>Privacy Policy</span>
+      <span>Terms of Service</span>
+      <span>Disclaimer</span>
+    </div>
+    <p>© 2025. All rights reserved.</p>
+  </footer>
+  
+  <script>
+    function goToStep2() {
+      const select = document.getElementById('device-select');
+      if (select.value) {
+        document.getElementById('step1').classList.add('hidden');
+        document.getElementById('step2').classList.remove('hidden');
+        setTimeout(() => {
+          document.getElementById('progress2').style.width = '77%';
+        }, 100);
+      }
+    }
+  </script>
+</body>
+</html>
