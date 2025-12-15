@@ -182,43 +182,51 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
+      gap: 12px;
       margin-top: 24px;
+      padding: 16px;
+      background: #f8f9fa;
+      border-radius: 8px;
     }
     
     .trust-text {
       font-size: 16px;
-      font-weight: 600;
-      color: #1a1a1a;
+      font-weight: 500;
+      color: #6b7280;
     }
     
     .trust-stars {
       display: flex;
-      gap: 2px;
+      gap: 3px;
     }
     
     .trust-stars .star {
       background: #00b67a;
       color: white;
-      width: 24px;
-      height: 24px;
+      width: 26px;
+      height: 26px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 14px;
+      font-size: 16px;
+      border-radius: 3px;
+    }
+    
+    .trust-logo-section {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    
+    .trust-star-icon {
+      color: #00b67a;
+      font-size: 20px;
     }
     
     .trust-logo {
       font-size: 16px;
       font-weight: 600;
       color: #1a1a1a;
-    }
-    
-    .trust-star {
-      background: #00b67a;
-      color: white;
-      width: 24px;
-      height: 24px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -267,7 +275,7 @@
       
       <!-- Step 2 -->
       <div id="step2" class="hidden">
-        <img src="images/ulta-logo.png" alt="Ulta Beauty Logo" class="logo">
+        <img src="https://logos-world.net/wp-content/uploads/2022/12/Ulta-Symbol.png" alt="Ulta Beauty Logo" class="logo">
         
         <div class="amount-section">
           <div class="amount">$500.00</div>
@@ -304,8 +312,10 @@
             <span class="star">★</span>
             <span class="star">★</span>
           </div>
-          <span class="trust-star">★</span>
-          <span class="trust-logo">Trustpilot</span>
+          <div class="trust-logo-section">
+            <span class="trust-star-icon">★</span>
+            <span class="trust-logo">Trustpilot</span>
+          </div>
         </div>
       </div>
     </div>
