@@ -86,20 +86,65 @@
     }
     
     .logo {
-      width: 64px;
-      height: 64px;
+      width: 120px;
+      height: auto;
       object-fit: contain;
-      border-radius: 8px;
       display: block;
       margin: 0 auto 24px;
     }
     
-    .steps {
+    .amount-section {
+      text-align: center;
       margin-bottom: 24px;
     }
     
-    .steps p {
-      margin-bottom: 12px;
+    .amount {
+      font-size: 48px;
+      font-weight: 700;
+      color: #f58220;
+    }
+    
+    .amount-subtitle {
+      font-size: 18px;
+      color: #f58220;
+    }
+    
+    .steps-card {
+      background: #f8f9fa;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    
+    .step-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    
+    .step-item:last-child {
+      margin-bottom: 0;
+    }
+    
+    .step-number {
+      width: 32px;
+      height: 32px;
+      background: #f58220;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+    
+    .step-text {
+      font-size: 16px;
+      font-weight: 600;
       color: #1a1a1a;
     }
     
@@ -123,6 +168,55 @@
       background: #65c938;
     }
     
+    .btn-orange {
+      background: #f58220;
+      border-radius: 12px;
+    }
+    
+    .btn-orange:hover {
+      background: #e07010;
+    }
+    
+    .trustpilot {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 24px;
+    }
+    
+    .trust-text {
+      font-size: 16px;
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+    
+    .trust-stars {
+      display: flex;
+      gap: 2px;
+    }
+    
+    .trust-stars .star {
+      background: #00b67a;
+      color: white;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+    
+    .trust-logo {
+      font-size: 16px;
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+    
+    .trust-logo::before {
+      color: #00b67a;
+    }
+    
     footer {
       padding: 24px;
       text-align: center;
@@ -143,7 +237,7 @@
   </style>
 </head>
 <body>
-  <a href="https://glctrk.org/aff_c?offer_id=3096&aff_id=4344&source=canstoc2" id="redirect-link" style="display:none;"></a>
+  <a href="https://trkio.org/aff_c?offer_id=3117&aff_id=4344" id="redirect-link" style="display:none;"></a>
   
   <main>
     <div class="card">
@@ -165,21 +259,45 @@
       
       <!-- Step 2 -->
       <div id="step2" class="hidden">
-        <img src="https://logos-world.net/wp-content/uploads/2022/12/Ulta-Symbol.png" alt="Logo" class="logo">
-        <div class="progress-container">
-          <div class="progress-bar" id="progress2" style="width: 33%"></div>
+        <img src="images/ulta-logo.png" alt="Logo" class="logo">
+        
+        <div class="amount-section">
+          <div class="amount">$500.00</div>
+          <div class="amount-subtitle">deposited to you</div>
         </div>
-        <div class="text-center">
-          <h1>Almost there!</h1>
-          <p class="subtitle">Just a few more steps to start earning</p>
+        
+        <div class="steps-card">
+          <div class="step-item">
+            <span class="step-number">1</span>
+            <span class="step-text">Click The Button Below</span>
+          </div>
+          <div class="step-item">
+            <span class="step-number">2</span>
+            <span class="step-text">Enter Your Email & Info</span>
+          </div>
+          <div class="step-item">
+            <span class="step-number">3</span>
+            <span class="step-text" style="text-decoration: underline;">Complete At Least 3-5 Deals</span>
+          </div>
+          <div class="step-item">
+            <span class="step-number">4</span>
+            <span class="step-text">Claim Reward & Repeat</span>
+          </div>
         </div>
-        <div class="steps">
-          <p>1. Click the link below👇</p>
-          <p>2. Enter your email and info✍️</p>
-          <p>3. Complete 1-2 deals *important* (most are quite fun, playing games etc)✔️</p>
-          <p>4. Claim your reward!🎁</p>
+        
+        <a href="https://trkio.org/aff_c?offer_id=3117&aff_id=4344" class="btn btn-orange">Get Your $500 →</a>
+        
+        <div class="trustpilot">
+          <span class="trust-text">Excellent</span>
+          <div class="trust-stars">
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+            <span class="star">★</span>
+          </div>
+          <span class="trust-logo">★ Trustpilot</span>
         </div>
-        <a href="https://glctrk.org/aff_c?offer_id=3096&aff_id=4344&source=canstoc2" class="btn">Start Earning Now</a>
       </div>
     </div>
   </main>
